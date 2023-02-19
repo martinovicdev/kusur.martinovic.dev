@@ -1,7 +1,8 @@
 import { z } from "zod";
 
-import {createTRPCRouter, publicProcedure} from "../trpc";
-import {formatNumberToString} from "../../../utils/numberOperations";
+import { createTRPCRouter, publicProcedure } from "../trpc";
+import { formatNumberToString } from "../../../utils/numberOperations";
+
 const rate = 7.5345;
 export const calculationRouter = createTRPCRouter({
   calculateRest: publicProcedure

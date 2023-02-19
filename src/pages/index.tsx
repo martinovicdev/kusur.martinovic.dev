@@ -11,15 +11,11 @@ const Home: NextPage = () => {
   const [givenEur, setGivenEur] = useState<number | null>(0);
   const [givenKn, setGivenKn] = useState<number | null>(0);
 
-  const calcRest = api.calculateRest.calculateRest.useQuery({
+  const calcRest = api.calculation.calculateRest.useQuery({
     priceEur: priceEur ?? 0,
     givenEur: givenEur ?? 0,
     givenKn: givenKn ?? 0,
   });
-
-  const goToGitHub = () => {
-    window.open("https://github.com/xiphoss1/kusur.martinovic.dev", "_blank");
-  };
 
   return (
     <>
@@ -36,7 +32,12 @@ const Home: NextPage = () => {
           icon="pi pi-github"
           className="p-button-rounded p-button-lg p-button-plain p-button-text absolute top-0 right-0 "
           aria-label="GitHub"
-          onClick={(event) => goToGitHub()}
+          onClick={() => {
+            window.open(
+              "https://github.com/xiphoss1/kusur.martinovic.dev",
+              "_blank"
+            );
+          }}
         />
         <div className="flex min-h-[90vh] flex-col items-center justify-center">
           <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
