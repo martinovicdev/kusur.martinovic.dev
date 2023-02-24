@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           aria-label="GitHub"
           onClick={() => {
             window.open(
-              "https://github.com/xiphoss1/kusur.martinovic.dev",
+              "https://github.com/martinovicdev/kusur.martinovic.dev",
               "_blank"
             );
           }}
